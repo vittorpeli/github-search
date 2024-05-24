@@ -1,0 +1,76 @@
+// First up: config
+@import 'config';
+
+// Next: pull in gorko for design tokens
+@import '../node_modules/gorko/gorko.scss';
+
+// Pull in modern reset
+@import 'reset';
+
+// Global CSS starts
+body {
+  line-height: 1.5;
+  overflow-x: hidden;
+  padding-bottom: get-size('600');
+  background-color: get-color('tertiary');
+
+  @include apply-utility('weight', 'medium');
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: get-size('700');
+}
+
+h2,
+h3 {
+  font-size: get-size('600');
+}
+
+a {
+  color: currentColor;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+}
+
+:focus {
+  outline: none;
+}
+
+.light {
+  background-color: get-color('tertiary');
+  color: get-color('secondary');
+}
+
+.dark {
+  background-color: get-color("secondary-shade");
+  color: get-color("light-shade");
+}
+
+// Utilities
+@import 'utilities/flow';
+@import 'utilities/radius';
+@import 'utilities/splitter';
+@import 'utilities/wrapper';
+@import 'utilities/visually-hidden';
+
+// Blocks
+@import 'blocks/key-header';
+@import 'blocks/app-head';
+@import 'blocks/summary';
+@import 'blocks/user-card';
+@import 'blocks/search';
+@import 'blocks/button';
+@import 'blocks/input';
+@import 'blocks/container';

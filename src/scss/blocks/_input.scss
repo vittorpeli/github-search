@@ -1,0 +1,23 @@
+$dark-color: get-color('secondary');
+$light-color: get-color('light');
+
+.input {
+  color: inherit;
+  background-color: $light-color;
+  padding: 1rem 3.5rem;
+  flex: 1;
+  font-size: 1rem;
+  width: 100%;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+
+  &:focus {
+    outline: 2.5px solid get-color('quaternary');
+  }
+
+}
+
+.dark .input {
+  background-color: $dark-color;
+}

@@ -1,0 +1,26 @@
+.button {
+  @extend .radius;
+
+  font: inherit;
+  display: inline-block;
+  line-height: 1;
+  text-decoration: none;
+  border: 1px solid get-color('primary');
+  background: get-color('primary');
+  color: get-color('light');
+  padding: 0.6rem 1.5rem;
+  position: relative;
+  cursor: pointer;
+
+  @include apply-utility('weight', 'bold');
+
+  &:hover {
+    background: get-color('quaternary');
+    border-color: get-color('quaternary');
+    color: get-color('light');
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
